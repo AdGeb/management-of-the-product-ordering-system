@@ -654,7 +654,7 @@ public class MyServiceImpl implements MyService {
             Payment.generate(true);
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Countries.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Countries.csv"); Scanner sc = new Scanner(reader)) {
             System.out.println("PROCESSING...");
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
@@ -664,7 +664,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Customers.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Customers.csv"); Scanner sc = new Scanner(reader)) {
             System.out.println("PROCESSING...");
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
@@ -676,7 +676,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Trades.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Trades.csv"); Scanner sc = new Scanner(reader)) {
             System.out.println("PROCESSING...");
             while (sc.hasNextLine()){
                 addNewTrade(sc.nextLine());
@@ -686,7 +686,7 @@ public class MyServiceImpl implements MyService {
         }
 
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Producers.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Producers.csv"); Scanner sc = new Scanner(reader)) {
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
                 lines.addAll(Arrays.asList(sc.nextLine().split(";")));
@@ -697,7 +697,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Categories.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Categories.csv"); Scanner sc = new Scanner(reader)) {
             while (sc.hasNextLine()){
                 addNewCategory(sc.nextLine());
             }
@@ -705,7 +705,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Products.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Products.csv"); Scanner sc = new Scanner(reader)) {
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
                 lines.addAll(Arrays.asList(sc.nextLine().split(";")));
@@ -716,7 +716,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Shops.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Shops.csv"); Scanner sc = new Scanner(reader)) {
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
                 lines.addAll(Arrays.asList(sc.nextLine().split(";")));
@@ -727,7 +727,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Stocks.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Stocks.csv"); Scanner sc = new Scanner(reader)) {
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
                 lines.addAll(Arrays.asList(sc.nextLine().split(";")));
@@ -738,7 +738,7 @@ public class MyServiceImpl implements MyService {
             e.printStackTrace();
         }
 
-        try (FileReader reader = new FileReader("C:\\Users\\Adam\\Desktop\\PER01 data\\Orders.csv"); Scanner sc = new Scanner(reader)) {
+        try (FileReader reader = new FileReader("C:\\Users\\PER01 data\\Orders.csv"); Scanner sc = new Scanner(reader)) {
             List<String> lines = new ArrayList<>();
             while (sc.hasNextLine()){
                 lines.addAll(Arrays.asList(sc.nextLine().split(";")));
@@ -757,7 +757,7 @@ public class MyServiceImpl implements MyService {
 
     @Override
     public void makeLogFile() {
-        try(FileWriter writer = new FileWriter("C:\\Users\\Adam\\Desktop\\PER01 data\\log.txt"); BufferedWriter bw = new BufferedWriter(writer)) {
+        try(FileWriter writer = new FileWriter("C:\\Users\\PER01 data\\log.txt"); BufferedWriter bw = new BufferedWriter(writer)) {
             List<String> messages = errorsDao.findAll().stream().map(e -> e.getMessage() + "\t" + e.getDate()).collect(Collectors.toList());
             for (String s: messages) {
                 bw.write(s);

@@ -87,7 +87,7 @@ public interface MyService {
         customerOrder.setDiscount(new BigDecimal(discount));
         customerOrder.setCustomer(customerDao.findOneByNameSurnameCountry(customerName, customerSurname, customersCountryName).get());
         customerOrder.setPayment(paymentDao.findOneByName(Payment.recognizePaymentMethod(ePayment)).get());
-        customerOrder.setProduct(productDao.findOneByName(productName).get());
+            customerOrder.setProduct(productDao.findOneByName(productName).get());
         customerOrder.setQuantity(quantity);
         customerOrderDao.add(customerOrder);
         return DbStatus.OK;
