@@ -5,7 +5,6 @@ There is DB_SCHEMA included to see how does DB look.
 
 # IMPORTANT
 # Unfortunately, You need to create your own mySQL database and connect it(edit persistence.xml).
-# There are already prepared .csv files in 'PER01 data' directory. They contain prepared data needed to initialize DB and should be 
-# located in C:\Users to work properly. Log file is also created in C:\Users.
+# There are already prepared .csv files in 'PER01 data' directory. They contain prepared data needed to initialize DB and should be located in C:\Users to work properly. Log file is also created in C:\Users.
 
 What you need to do after connectiong mySQL DB and locating 'PER01 data' in proper directory is just Run App and follow the menu.
