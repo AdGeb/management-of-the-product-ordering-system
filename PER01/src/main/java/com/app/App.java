@@ -21,11 +21,10 @@ public class App {
 
 
     public static void main(String[] args) {
-        ErrorService errorService = new ErrorServiceImpl();
-        try {
 
-            System.out.println(EGuarantee.HELP_DESK);
-            System.out.println(Product.recognizeEGuarantee("HELP DESK"));
+        ErrorService errorService = new ErrorServiceImpl();
+
+        try {
             menu();
 
         }catch (Exception e){
@@ -291,7 +290,6 @@ public class App {
                                 System.out.println("PRODUCER'S COUNTRY: ");
                                 lines.add(sc.nextLine());
                                 System.out.println("SEVICE / MONEY BACK / HELP DESK / EXCHANGE");
-                                sc.nextLine();
                                 System.out.println("GUARANTEE: ");
                                 lines.add(sc.nextLine());
                                 myService.addNewProduct(lines.get(0), lines.get(1), lines.get(2), lines.get(3), lines.get(4));

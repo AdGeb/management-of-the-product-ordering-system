@@ -62,4 +62,8 @@ public class Category {
                 ", name='" + name + '\'' +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
 }

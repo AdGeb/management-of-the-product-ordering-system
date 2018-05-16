@@ -13,7 +13,6 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
-// DOROBIC STATUSY BLEDOW
 public abstract class AbstractGenericDao<T> implements GenericDao<T> {
 
     private Class<T> entity = (Class<T>) ((ParameterizedType) this.getClass().getGenericSuperclass()).getActualTypeArguments()[0];
@@ -24,7 +23,6 @@ public abstract class AbstractGenericDao<T> implements GenericDao<T> {
         return entityManagerFactory;
     }
 
-    //private ErrorService errorService = new ErrorServiceImpl();
 
     public DbStatus add(T t) {
         EntityManager entityManager = entityManagerFactory.createEntityManager();

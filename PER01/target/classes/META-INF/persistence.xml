@@ -4,7 +4,6 @@
              http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
              version="2.1">
 
-    <!-- RESOURCE_LOCAL OZNACZA ZE SAMI SOBIE ZROBIMY EntityManagerFactory, mozna dac JTA wtedy serwer dostarcza -->
     <persistence-unit name="HIBERNATE_PERSISTENCE" transaction-type="RESOURCE_LOCAL">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <properties>

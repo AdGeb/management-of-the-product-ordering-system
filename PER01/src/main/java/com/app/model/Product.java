@@ -158,4 +158,16 @@ public class    Product {
                 ", price=" + price +
                 '}';
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Producer getProducer() {
+        return producer;
+    }
 }

@@ -80,4 +80,8 @@ public class Producer {
                 ", country=" + country +
                 '}';
     }
+
+    public String getName() {
+        return name;
+    }
 }

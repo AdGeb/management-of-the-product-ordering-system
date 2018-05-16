@@ -32,7 +32,6 @@ public class MyServiceImpl implements MyService {
     private StockDao stockDao = new StockDaoImpl();
     private PaymentDao paymentDao = new PaymentDaoImpl();
     private CustomerOrderDao customerOrderDao = new CustomerOrderDaoImpl();
-    private ErrorService errorService = new ErrorServiceImpl();
 
 
     @Override
